@@ -1,0 +1,18 @@
+{
+    "name": "juice-lang/juicelang.org",
+    "description": "OctoberCMS theme of the official website of the juice programming language",
+    "type": "october-theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zollerboy1",
+            "email": "josef@walterzollerpiano.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "config": {
+        "preferred-install": "source"
+    }
+}

@@ -1,0 +1,33 @@
+description = "The default layout of this website"
+==
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>juice &ndash; {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="Josef Zoller">
+        <meta name="generator" content="OctoberCMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link href="{{ ['assets/css/default.scss']|theme }}" rel="stylesheet">
+
+        {% styles %}
+    </head>
+    <body>
+        <div class="uk-container uk-margin-top content">
+            {% page %}
+        </div>
+
+        <script src="{{ [
+            '@jquery',
+            'assets/js/uikit/uikit.min.js',
+            'assets/js/uikit/uikit-icons.min.js',
+            'assets/js/default.js'
+        ]|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+    </body>
+</html>

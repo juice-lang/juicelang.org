@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+// 1. Your custom variables and variable overwrites.
+
+// 2. Import default variables and available mixins.
+@import "uikit/variables-theme";
+@import "uikit/mixins-theme";
+
+// 3. Your custom mixin overwrites.
+
+// 4. Import UIkit.
+@import "uikit/uikit-theme";
