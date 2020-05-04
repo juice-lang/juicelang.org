@@ -59,7 +59,7 @@ a local Apache server for you, or you install one manually.
 3. Add the juicelang.org theme as a requirement to Composer.
    
    ```bash
-   $ <COMPOSER_COMMAND> require juice-lang/juicelang.org:dev-master
+   $ <COMPOSER_COMMAND> require --prefer-source juice-lang/juicelang.org:dev-master
    ```
    
    This will install the theme alongside all needed plugins.
@@ -71,7 +71,7 @@ a local Apache server for you, or you install one manually.
    ```
    
 Now everything should be set up for use and development.\
-It's likely however, that you get an error like the following on upon first open of the website.
+It's likely however, that you get an error like the following upon first open of the website.
 
 ```
 The stream or file "/path/to/storage/logs/system.log" could not be opened: failed to open stream: Permission denied
