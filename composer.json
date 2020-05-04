@@ -10,7 +10,8 @@
         }
     ],
     "require": {
-        "php": ">=7.0"
+        "php": ">=7.0",
+        "juice-lang/helpers-plugin": "^1.0.0"
     },
     "config": {
         "preferred-install": "source"

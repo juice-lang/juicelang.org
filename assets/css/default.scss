@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap');
-
-body {
-    font-family: 'Fira Sans', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 // 1. Your custom variables and variable overwrites.
+$inverse-logo-hover-color: rgba(white, .85);
+$logo-font-size: 4rem;
 
 // 2. Import default variables and available mixins.
 @import "uikit/variables-theme";
@@ -14,3 +12,12 @@ body {
 
 // 4. Import UIkit.
 @import "uikit/uikit-theme";
+
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.header {
+    background: #ee5a16 linear-gradient(to right, #df8e15, #ee5a16);
+}

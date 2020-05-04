@@ -12,12 +12,29 @@ description = "The default layout of this website"
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <link href="{{ ['assets/css/default.scss']|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/default.css'|theme }}" rel="stylesheet">
 
         {% styles %}
     </head>
     <body>
-        <div class="uk-container uk-margin-top content">
+        <div class="uk-container uk-container-expand header">
+            <nav class="uk-navbar-container uk-container uk-container-small uk-navbar-transparent uk-light" uk-navbar>
+                <div class="uk-navbar-left">
+                    <a class="uk-navbar-item uk-logo uk-text-italic uk-padding-small uk-padding-remove-left"
+                       href="{{ 'home'|page }}">
+                        juice
+                    </a>
+                </div>
+                <div class="uk-navbar-right">
+                    <div class="uk-navbar-item">
+                        <div class="uk-text-large">
+                            The <span class="uk-text-italic uk-text-bold">juicy</span> programming language
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="uk-container uk-container-small uk-margin-large-top content">
             {% page %}
         </div>
 

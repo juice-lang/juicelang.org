@@ -4,8 +4,40 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1ffba8e26947b4422bae262fa9472d1",
-    "packages": [],
+    "content-hash": "25e173466df33a358adc62c8fe778504",
+    "packages": [
+        {
+            "name": "juice-lang/helpers-plugin",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/juice-lang/helpers-plugin.git",
+                "reference": "ce19923444fa555589f32cc22de98aa92007b28c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/juice-lang/helpers-plugin/zipball/ce19923444fa555589f32cc22de98aa92007b28c",
+                "reference": "ce19923444fa555589f32cc22de98aa92007b28c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "october-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zollerboy1",
+                    "email": "josef@walterzollerpiano.com"
+                }
+            ],
+            "description": "This plugin defines various amendments to OctoberCMS and some helper classes",
+            "time": "2020-05-04T15:04:43+00:00"
+        }
+    ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
