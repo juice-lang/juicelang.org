@@ -8,7 +8,11 @@ Thanks to its type-system, which ensures memory- and thread-safety, *juice* prev
 compile-time.  
 The syntax derives from multiple modern languages, like Swift, Rust, C++, and Python.
 
-At the moment, the first version of *juice* is in active development. You can take a look at the state of things at the
-[*juice* GitHub repository][1].
+At the moment, the first version of *juice* is in active development. You can take a look at the state of things in the
+[*juice* GitHub repository][1].  
+The `type-checker` branch already features control-flow, semantic analysis, and LLVM IR generation.
+
+This website is in the development stage as well. Over time, it will contain the documentation of the language, a blog,
+a playground to try the language out online, and much more.
 
 [1]: https://github.com/juice-lang/juice (juice-lang/juice Github repository)

@@ -24,10 +24,9 @@ a local Apache server for you, or you install one manually.
   $ sudo apt install composer
   ```
   
-  Otherwise, you can find an installation guide [here][5].
-  
-  The placeholder `<COMPOSER_COMMAND>` is used in the following section. If you installed composer through brew or
-  apt, it should be `composer`, otherwise `php /path/to/composer.phar`.
+  Otherwise, you can find an installation guide [here][5].\
+  If you installed composer this way, you should replace `composer` in the commands in the section below with
+  `php /path/to/composer.phar`.
 
 #### Installation
 
@@ -36,7 +35,7 @@ a local Apache server for you, or you install one manually.
    
    ```bash
    $ cd <INSTALLATION_DIRECTORY>
-   $ <COMPOSER_COMMAND> create-project october/october .
+   $ composer create-project october/october .
    $ php artisan october:install
    ```
    
@@ -59,7 +58,7 @@ a local Apache server for you, or you install one manually.
 3. Add the juicelang.org theme as a requirement to Composer.
    
    ```bash
-   $ <COMPOSER_COMMAND> require --prefer-source juice-lang/juicelang.org:dev-master
+   $ composer require --prefer-source juice-lang/juicelang.org:dev-master
    ```
    
    This will install the theme alongside all needed plugins.
@@ -95,7 +94,7 @@ $ sudo chown -R $USER:<FOUND_USERNAME> storage
 $ chmod -R 775 storage
 ```
 
-After you've done that, everything should work now.
+After you've done that, everything should hopefully work.
 
 ### Contributing
 
