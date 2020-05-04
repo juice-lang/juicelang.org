@@ -8,4 +8,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: update
-              run: curl https://git-update.juicelang.org/staging
+              shell: bash
+              env:
+                PACKAGIST_TOKEN: ${{ secrets.PACKAGIST_TOKEN }}
+              run: |
+                curl -XPOST -H'content-type:application/json' "https://packagist.org/api/update-package?username=Zollerboy1&apiToken=${PACKAGIST_TOKEN}" -d'{"repository":{"url":"https://packagist.org/packages/juice-lang/juicelang.org"}}'
+                curl https://git-update.juicelang.org/staging
