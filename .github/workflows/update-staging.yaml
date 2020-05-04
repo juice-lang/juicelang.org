@@ -1,0 +1,11 @@
+name: Update staging.juicelang.org
+
+on:
+    push:
+        branches: [ master ]
+jobs:
+    update:
+        runs-on: ubuntu-latest
+        steps:
+            - name: update
+              run: curl https://git-update.juicelang.org/staging
