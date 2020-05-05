@@ -6,6 +6,20 @@ axios.defaults.validateStatus = (status) => { return status === 200 || status ==
 const url = core.getInput('url');
 const packagistToken = core.getInput('packagist-token');
 
+function deploy() {
+    axios.get(url).then((response) => {
+        if (!response.data.success) {
+            core.setFailed("Deployment error!\nstdout: " + response.data.stdout + "\nstderr: " + response.data.stderr);
+            process.exit(1);
+        }
+
+        console.log("Deployment successful!");
+    }).catch((error) => {
+        core.setFailed(error);
+        process.exit(1);
+    });
+}
+
 axios.post("https://packagist.org/api/update-package?username=Zollerboy1&apiToken=" + packagistToken, {
     repository: { url: "https://packagist.org/packages/juice-lang/juicelang.org" }
 }, {
@@ -19,19 +33,9 @@ axios.post("https://packagist.org/api/update-package?username=Zollerboy1&apiToke
     }
 
     console.log("Packagist update successful!");
-}).catch((error) => {
-    core.setFailed("Error: " + error);
-    process.exit(1);
-});
 
-axios.get(url).then((response) => {
-    if (!response.data.success) {
-        core.setFailed("Deployment error!\nstdout: " + response.data.stdout + "\nstderr: " + response.data.stderr);
-        process.exit(1);
-    }
-
-    console.log("Deployment successful!");
+    setTimeout(deploy, 10000);
 }).catch((error) => {
-    core.setFailed("Error: " + error);
+    core.setFailed(error);
     process.exit(1);
 });
