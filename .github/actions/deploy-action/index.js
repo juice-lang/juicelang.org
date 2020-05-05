@@ -8,6 +8,8 @@ const packagistToken = core.getInput('packagist-token');
 
 function deploy() {
     axios.get(url).then((response) => {
+        console.log(response.data);
+
         if (!response.data.success) {
             core.setFailed("Deployment error!\nstdout: " + response.data.stdout + "\nstderr: " + response.data.stderr);
             process.exit(1);
@@ -27,12 +29,21 @@ axios.post("https://packagist.org/api/update-package?username=Zollerboy1&apiToke
         'Content-Type': 'application/json',
     }
 }).then((response) => {
+    console.log(response.data);
+
     if (response.data.status !== "success") {
         core.setFailed("Packagist error: " + response.data.message);
         process.exit(1);
     }
 
     console.log("Packagist update successful!");
+
+    axios.get("https://packagist.org/packages/juice-lang/juicelang.org.json").then((response) => {
+        console.log(response.data.package.versions['dev-master']);
+    }).catch((error) => {
+        core.setFailed(error);
+        process.exit(1);
+    });
 
     setTimeout(deploy, 10000);
 }).catch((error) => {
