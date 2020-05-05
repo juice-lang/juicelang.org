@@ -37,8 +37,22 @@ description = "The default layout of this website"
         <div class="uk-container uk-container-small uk-margin-large-top content">
             {% page %}
         </div>
-        <div class="uk-container uk-container-small uk-margin-large-top footer">
-            &copy; {{ 'now'|date('Y') }} juice-lang
+        <div class="uk-container uk-container-small uk-margin-small-top footer">
+            <nav class="uk-navbar-container uk-container uk-container-small uk-navbar-transparent" uk-navbar>
+                <div class="uk-navbar-left">
+                    <div class="uk-navbar-item uk-padding-remove-right">&copy; {{ 'now'|date('Y') }}&nbsp;</div>
+                    <a class="uk-navbar-item uk-padding-remove-left" href="{{ 'home'|page }}">juice-lang</a>
+                </div>
+                <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav">
+                        <li>
+                            <a href="https://github.com/juice-lang">
+                                <span class="uk-icon uk-margin-small-right" uk-icon="icon: github"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
 
         <script src="{{ [
