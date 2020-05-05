@@ -1,0 +1,12 @@
+name: 'Deploy to server'
+description: 'Updates the Packagist package and sends a request to the specified URL to deploy the latest commit'
+inputs:
+    url:
+        description: 'URL to send the request to'
+        required: true
+    packagist-token:
+        description: 'API-Token for Packagist'
+        required: true
+runs:
+    using: node12
+    main: 'index.js'
