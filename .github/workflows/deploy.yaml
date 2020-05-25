@@ -7,8 +7,8 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-            -   uses: actions/checkout@v2
-            -   uses: ./.github/actions/deploy-action
-                with:
-                    url: 'https://deploy.juicelang.org'
-                    packagist-token: ${{ secrets.PACKAGIST_TOKEN }}
+            - uses: actions/checkout@v2
+            - uses: ./.github/actions/deploy-action
+              with:
+                url: 'https://deploy.juicelang.org'
+                git-sha: ${{ github.sha }}

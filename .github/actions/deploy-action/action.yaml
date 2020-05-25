@@ -4,8 +4,8 @@ inputs:
     url:
         description: 'URL to send the request to'
         required: true
-    packagist-token:
-        description: 'API-Token for Packagist'
+    git-sha:
+        description: 'SHA of the current git commit'
         required: true
 runs:
     using: node12
