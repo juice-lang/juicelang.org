@@ -13,6 +13,6 @@ At the moment, the first version of *juice* is in active development. You can ta
 The `type-checker` branch already features control-flow, semantic analysis, and LLVM IR generation.
 
 This website is in the development stage as well. Over time, it will contain the documentation of the language, a blog,
-a playground to try the language out online, and much more.
+a playground for trying out the language online, and much more.
 
 [1]: https://github.com/juice-lang/juice (juice-lang/juice Github repository)

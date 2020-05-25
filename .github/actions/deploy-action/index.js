@@ -41,12 +41,12 @@ function update() {
 
         axios.get("https://packagist.org/packages/juice-lang/juicelang.org.json").then((response) => {
             console.log(response.data.package.versions['dev-master']);
-
-            setTimeout(deploy, 60000);
         }).catch((error) => {
             core.setFailed(error);
             process.exit(1);
         });
+
+        setTimeout(deploy, 60000);
     }).catch((error) => {
         core.setFailed(error);
         process.exit(1);

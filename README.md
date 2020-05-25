@@ -25,7 +25,7 @@ a local Apache server for you, or you install one manually.
   ```
   
   Otherwise, you can find an installation guide [here][5].\
-  If you installed composer this way, you should replace `composer` in the commands in the section below with
+  If you installed composer this way, you should replace `composer` in the commands below with
   `php /path/to/composer.phar`.
 
 #### Installation
