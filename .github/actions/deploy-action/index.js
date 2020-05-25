@@ -22,31 +22,35 @@ function deploy() {
     });
 }
 
-axios.post("https://packagist.org/api/update-package?username=Zollerboy1&apiToken=" + packagistToken, {
-    repository: { url: "https://packagist.org/packages/juice-lang/juicelang.org" }
-}, {
-    headers: {
-        'Content-Type': 'application/json',
-    }
-}).then((response) => {
-    console.log(response.data);
+function update() {
+    axios.post("https://packagist.org/api/update-package?username=Zollerboy1&apiToken=" + packagistToken, {
+        repository: { url: "https://packagist.org/packages/juice-lang/juicelang.org" }
+    }, {
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    }).then((response) => {
+        console.log(response.data);
 
-    if (response.data.status !== "success") {
-        core.setFailed("Packagist error: " + response.data.message);
-        process.exit(1);
-    }
+        if (response.data.status !== "success") {
+            core.setFailed("Packagist error: " + response.data.message);
+            process.exit(1);
+        }
 
-    console.log("Packagist update successful!");
+        console.log("Packagist update successful!");
 
-    axios.get("https://packagist.org/packages/juice-lang/juicelang.org.json").then((response) => {
-        console.log(response.data.package.versions['dev-master']);
+        axios.get("https://packagist.org/packages/juice-lang/juicelang.org.json").then((response) => {
+            console.log(response.data.package.versions['dev-master']);
+
+            setTimeout(deploy, 60000);
+        }).catch((error) => {
+            core.setFailed(error);
+            process.exit(1);
+        });
     }).catch((error) => {
         core.setFailed(error);
         process.exit(1);
     });
+}
 
-    setTimeout(deploy, 10000);
-}).catch((error) => {
-    core.setFailed(error);
-    process.exit(1);
-});
+setTimeout(update, 10000);

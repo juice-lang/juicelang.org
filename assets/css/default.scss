@@ -9,6 +9,29 @@ $logo-font-size: 4rem;
 @import "uikit/mixins-theme";
 
 // 3. Your custom mixin overwrites.
+@mixin hook-logo() {
+    .logo-image {
+        height: 1.5em;
+
+        svg {
+            height: 1.5em;
+            vertical-align: top;
+            width: 1.5em;
+        }
+    }
+}
+
+@mixin hook-inverse-logo() {
+    .logo-image path {
+        fill: $inverse-logo-color;
+    }
+}
+
+@mixin hook-inverse-logo-hover() {
+    .logo-image path {
+        fill: $inverse-logo-hover-color;
+    }
+}
 
 // 4. Import UIkit.
 @import "uikit/uikit-theme";
@@ -19,5 +42,9 @@ body {
 }
 
 .header {
-    background: #ee5a16 linear-gradient(to right, #df8e15, #ee5a16);
+    background: #df8e15 linear-gradient(to right, #df8e15, #df8e15 50%, #ee5a16 50%, #ee5a16);
+
+    .header-nav {
+        background: #df8e15 linear-gradient(to right, #df8e15, #df8e15 1.5em, #ee5a16);
+    }
 }
