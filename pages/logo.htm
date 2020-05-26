@@ -1,0 +1,18 @@
+title = "Logo"
+url = "/logo"
+is_hidden = 0
+==
+<?php
+
+use Cms\Classes\Asset;
+use Cms\Classes\Theme;
+
+function onStart() {
+    $theme = Theme::getActiveTheme();
+    $logo = Asset::load($theme, 'images/juice.svg');
+
+    return Response::make($logo->content)
+        ->header('Content-Type', 'image/svg+xml')
+        ->header('Cache-Control', 'no-cache');
+}
+==

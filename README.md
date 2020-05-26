@@ -1,4 +1,4 @@
-<img src="https://juicelang.org/themes/juicelang.org/assets/images/juice.svg" alt="juice logo" height="70">
+<img src="https://juicelang.org/logo" alt="juice logo" height="70">
 
 # [juicelang.org][1]
 ## The repository of the *juice* website
