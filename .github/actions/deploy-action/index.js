@@ -5,8 +5,18 @@ axios.defaults.validateStatus = (status) => { return status === 200 || status ==
 
 const url = core.getInput('url');
 const gitSHA = core.getInput('git-sha');
+const authUser = core.getInput('auth-user');
+const authPassword = core.getInput('auth-password');
 
-axios.get(url, { params: { sha: gitSHA } }).then((response) => {
+axios.get(url, {
+    params: {
+        sha: gitSHA
+    },
+    auth: {
+        username: authUser,
+        password: authPassword
+    }
+}).then((response) => {
     console.log(response.data);
 
     if (!response.data.success) {

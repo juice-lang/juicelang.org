@@ -12,3 +12,5 @@ jobs:
               with:
                 url: 'https://deploy.juicelang.org/staging'
                 git-sha: ${{ github.sha }}
+                auth-user: ${{ secrets.DEPLOY_AUTH_USER }}
+                auth-password: ${{ secrets.DEPLOY_AUTH_PASSWORD }}
