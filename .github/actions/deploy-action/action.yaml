@@ -7,6 +7,12 @@ inputs:
     git-sha:
         description: 'SHA of the current git commit'
         required: true
+    auth-user:
+        description: 'User for basic authentication'
+        required: true
+    auth-password:
+        description: 'Password for basic authentication'
+        required: true
 runs:
     using: node12
     main: 'index.js'
