@@ -190,6 +190,16 @@ $logo-font-size: 4rem;
     }
 }
 
+.logo {
+    .logo-text {
+        margin-left: .1em;
+
+        .logo-name {
+            transform: skewX(-17deg);
+        }
+    }
+}
+
 .mobile-logo {
     font-size: 3rem;
 
