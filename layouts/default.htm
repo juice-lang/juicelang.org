@@ -34,11 +34,15 @@ description = "The default layout of this website"
                         uk-flex-column uk-flex-row@m header-nav" uk-navbar>
                 <div class="uk-navbar-left">
                     <a class="uk-navbar-item uk-logo uk-text-italic uk-padding-small uk-padding-remove-left
-                              uk-visible@m" href="{{ 'home'|page }}">
-                        <div class="logo-image">
-                            {% partial "logo.htm" %}
+                              uk-visible@m logo" href="{{ 'home'|page }}">
+                        <div class="uk-flex">
+                            <div class="logo-image">
+                                {% partial "logo.htm" %}
+                            </div>
+                            <div class="logo-text">
+                                <div class="uk-text-italic logo-name">juice</div>
+                            </div>
                         </div>
-                        juice
                     </a>
                     <a class="uk-navbar-item uk-logo uk-padding-small uk-padding-remove-left uk-hidden@m mobile-logo"
                        href="{{ 'home'|page }}">
