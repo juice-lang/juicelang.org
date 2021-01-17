@@ -8,7 +8,7 @@ const gitSHA = core.getInput('git-sha');
 const authUser = core.getInput('auth-user');
 const authPassword = core.getInput('auth-password');
 
-axios.get(url, {
+const config = {
     params: {
         sha: gitSHA
     },
@@ -16,16 +16,20 @@ axios.get(url, {
         username: authUser,
         password: authPassword
     }
-}).then((response) => {
-    console.log(response.data);
+};
 
-    if (!response.data.success) {
-        core.setFailed("Deployment error!\nstdout: " + response.data.stdout + "\nstderr: " + response.data.stderr);
+(async () => {
+    try {
+        const response = await axios.get(url, config);
+        console.log(response.data);
+
+        if (!response.data.success) {
+            throw new Error("Deployment error!\nstdout: " + response.data.stdout + "\nstderr: " + response.data.stderr);
+        }
+
+        console.log("Deployment successful!");
+    } catch (e) {
+        core.setFailed(e.message);
         process.exit(1);
     }
-
-    console.log("Deployment successful!");
-}).catch((error) => {
-    core.setFailed(error);
-    process.exit(1);
-});
+})();
