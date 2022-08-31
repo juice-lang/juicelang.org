@@ -1,0 +1,9 @@
+title: Documentation
+index_path: docs/index.md
+menu:
+  - path: docs/language-guide/index.md
+  - path: docs/stdlib-reference/index.md
+  - path: docs/language-reference/index.md
+    children:
+      - path: docs/language-reference/lexical-structure.md
+  - path: docs/compiler-documentation/index.md
