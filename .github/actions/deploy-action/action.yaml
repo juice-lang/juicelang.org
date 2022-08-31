@@ -1,0 +1,15 @@
+name: 'Deploy to server'
+description: 'Updates the Packagist package and sends a request to the specified URL to deploy the latest commit'
+inputs:
+    url:
+        description: 'URL to send the request to'
+        required: true
+    auth-user:
+        description: 'User for basic authentication'
+        required: true
+    auth-password:
+        description: 'Password for basic authentication'
+        required: true
+runs:
+    using: node12
+    main: 'index.js'
