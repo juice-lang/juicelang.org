@@ -1,0 +1,15 @@
+name: Deploy branch master to staging.juicelang.org
+
+on:
+    push:
+        branches: [ main ]
+jobs:
+    deploy-staging:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: ./.github/actions/deploy-action
+              with:
+                url: 'https://deploy.juicelang.org/staging'
+                auth-user: ${{ secrets.DEPLOY_AUTH_USER }}
+                auth-password: ${{ secrets.DEPLOY_AUTH_PASSWORD }}
