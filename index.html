@@ -1,7 +1,129 @@
 ---
 title: Start
 layout: fullwidth_page
+additional_css: "/assets/css/start.css"
 ---
-<div class="uk-container uk-container-small">
-    {% include markdown.html file='introduction.md' %}
+<div class="uk-container uk-container-expand">
+    <div class="uk-container uk-container-small">
+        {% include markdown.html file='introduction.md' %}
+    </div>
+</div>
+<div class="uk-container uk-container-expand uk-background-secondary uk-margin-top">
+    <div class="uk-container uk-container-small uk-margin-top uk-margin-bottom navigation-cards">
+        <div class="uk-child-width-1-3 uk-grid-small uk-grid-match uk-visible@m" uk-grid>
+            <div class="uk-flex uk-flex-column">
+                <a href="{{ '/docs' | absolute_url }}" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover card-red" tabindex="1">
+                    <h3 class="uk-card-title">Documentation</h3>
+                    <p>Here you can find a language guide, providing a short introduction into <span class="uk-text-italic">juice</span>, the standard library reference, the language reference, containing a complete syntax specification, and some documentation of the <span class="uk-text-italic">juice</span> compiler itself.</p>
+                </a>
+                <a href="#" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover uk-margin-top card-green" tabindex="4">
+                    <div class="uk-card-badge uk-label">Coming soon</div>
+                    <h3 class="uk-card-title">Blog</h3>
+                    <p>Look in here if you want to be updated fairly regularly about new language versions, featured projects, etc.</p>
+                </a>
+            </div>
+            <div class="uk-flex uk-flex-column">
+                <a href="#" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover card-yellow" tabindex="2">
+                    <div class="uk-card-badge uk-label">Coming soon</div>
+                    <h3 class="uk-card-title">Downloads</h3>
+                    <p>You can download pre-built binaries of the <span class="uk-text-italic">juice</span> compiler for the officially supported platforms here.</p>
+                </a>
+                <a href="#" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover uk-margin-top card-purple" tabindex="5">
+                    <div class="uk-card-badge uk-label">Coming soon</div>
+                    <h3 class="uk-card-title">Playground</h3>
+                    <p>Play around with the language in your browser!</p>
+                </a>
+                <a href="#" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover uk-margin-top card-grey" tabindex="7">
+                    <div class="uk-card-badge uk-label">Coming soon</div>
+                    <h3 class="uk-card-title">Contributing</h3>
+                    <p>Here you can find out how to contribute to the language.</p>
+                </a>
+            </div>
+            <div class="uk-flex uk-flex-column">
+                <a href="#" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover card-blue" tabindex="3">
+                    <div class="uk-card-badge uk-label">Coming soon</div>
+                    <h3 class="uk-card-title">Forums</h3>
+                    <p>The <span class="uk-text-italic">juice</span> forums are the primary method of communication among the <span class="uk-text-italic">juice</span> community. Changes to the language can be proposed and the compiler development discussed here. If you have questions about the language (even beginner ones!) you are also welcome to ask them in the forums.</p>
+                </a>
+                <a href="https://github.com/juice-lang/juice" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover uk-margin-top card-orange" tabindex="6">
+                    <h3 class="uk-card-title">GitHub</h3>
+                    <p>Check out the source code of the <span class="uk-text-italic">juice</span> compiler over in this repository.</p>
+                </a>
+            </div>
+        </div>
+        <div class="uk-child-width-1-2 uk-grid-small uk-grid-match uk-visible@s uk-hidden@m" uk-grid>
+            <div class="uk-flex uk-flex-column">
+                <a href="{{ '/docs' | absolute_url }}" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover card-red" tabindex="1">
+                    <h3 class="uk-card-title">Documentation</h3>
+                    <p>Here you can find a language guide, providing a short introduction into <span class="uk-text-italic">juice</span>, the standard library reference, the language reference, containing a complete syntax specification, and some documentation of the <span class="uk-text-italic">juice</span> compiler itself.</p>
+                </a>
+                <a href="#" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover uk-margin-top card-blue" tabindex="3">
+                    <div class="uk-card-badge uk-label">Coming soon</div>
+                    <h3 class="uk-card-title">Forums</h3>
+                    <p>The <span class="uk-text-italic">juice</span> forums are the primary method of communication among the <span class="uk-text-italic">juice</span> community. Changes to the language can be proposed and the compiler development discussed here. If you have questions about the language (even beginner ones!) you are also welcome to ask them in the forums.</p>
+                </a>
+                <a href="https://github.com/juice-lang/juice" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover uk-margin-top card-orange" tabindex="6">
+                    <h3 class="uk-card-title">GitHub</h3>
+                    <p>Check out the source code of the <span class="uk-text-italic">juice</span> compiler over in this repository.</p>
+                </a>
+            </div>
+            <div class="uk-flex uk-flex-column">
+                <a href="#" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover card-yellow" tabindex="2">
+                    <div class="uk-card-badge uk-label">Coming soon</div>
+                    <h3 class="uk-card-title">Downloads</h3>
+                    <p>You can download pre-built binaries of the <span class="uk-text-italic">juice</span> compiler for the officially supported platforms here.</p>
+                </a>
+                <a href="#" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover uk-margin-top card-purple" tabindex="4">
+                    <div class="uk-card-badge uk-label">Coming soon</div>
+                    <h3 class="uk-card-title">Playground</h3>
+                    <p>Play around with the language in your browser!</p>
+                </a>
+                <a href="#" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover uk-margin-top card-green" tabindex="5">
+                    <div class="uk-card-badge uk-label">Coming soon</div>
+                    <h3 class="uk-card-title">Blog</h3>
+                    <p>Look in here if you want to be updated fairly regularly about new language versions, featured projects, etc.</p>
+                </a>
+                <a href="#" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover uk-margin-top card-grey" tabindex="7">
+                    <div class="uk-card-badge uk-label">Coming soon</div>
+                    <h3 class="uk-card-title">Contributing</h3>
+                    <p>Here you can find out how to contribute to the language.</p>
+                </a>
+            </div>
+        </div>
+        <div class="uk-flex uk-flex-column uk-hidden@s">
+            <a href="{{ '/docs' | absolute_url }}" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover card-red">
+                <h3 class="uk-card-title">Documentation</h3>
+                <p>Here you can find a language guide, providing a short introduction into <span class="uk-text-italic">juice</span>, the standard library reference, the language reference, containing a complete syntax specification, and some documentation of the <span class="uk-text-italic">juice</span> compiler itself.</p>
+            </a>
+            <a href="#" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover uk-margin-top card-yellow">
+                <div class="uk-card-badge uk-label">Coming soon</div>
+                <h3 class="uk-card-title">Downloads</h3>
+                <p>You can download pre-built binaries of the <span class="uk-text-italic">juice</span> compiler for the officially supported platforms here.</p>
+            </a>
+            <a href="#" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover uk-margin-top card-blue">
+                <div class="uk-card-badge uk-label">Coming soon</div>
+                <h3 class="uk-card-title">Forums</h3>
+                <p>The <span class="uk-text-italic">juice</span> forums are the primary method of communication among the <span class="uk-text-italic">juice</span> community. Changes to the language can be proposed and the compiler development discussed here. If you have questions about the language (even beginner ones!) you are also welcome to ask them in the forums.</p>
+            </a>
+            <a href="#" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover uk-margin-top card-purple">
+                <div class="uk-card-badge uk-label">Coming soon</div>
+                <h3 class="uk-card-title">Playground</h3>
+                <p>Play around with the language in your browser!</p>
+            </a>
+            <a href="#" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover uk-margin-top card-green">
+                <div class="uk-card-badge uk-label">Coming soon</div>
+                <h3 class="uk-card-title">Blog</h3>
+                <p>Look in here if you want to be updated fairly regularly about new language versions, featured projects, etc.</p>
+            </a>
+            <a href="https://github.com/juice-lang/juice" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover uk-margin-top card-orange">
+                <h3 class="uk-card-title">GitHub</h3>
+                <p>Check out the source code of the <span class="uk-text-italic">juice</span> compiler over in this repository.</p>
+            </a>
+            <a href="#" class="uk-card uk-card-primary uk-card-body uk-link-reset uk-card-hover uk-margin-top card-grey">
+                <div class="uk-card-badge uk-label">Coming soon</div>
+                <h3 class="uk-card-title">Contributing</h3>
+                <p>Here you can find out how to contribute to the language.</p>
+            </a>
+        </div>
+    </div>
 </div>

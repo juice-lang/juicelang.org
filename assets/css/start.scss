@@ -1,0 +1,44 @@
+---
+---
+
+$navigation-card-colors: (
+    "red": #fb3640,
+    "yellow": #e0bf00,
+    "blue": #247ba0,
+    "green": #8a9b68,
+    "purple": #717ec3,
+    "orange": #ffa400,
+    "grey": #9c9990
+);
+
+.navigation-cards {
+    .uk-card-body {
+        padding: 15px 15px;
+
+        .uk-label {
+            font-size: 0.8rem;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .uk-card-body {
+            padding: 25px 25px;
+        }
+    }
+
+    @each $name, $color in $navigation-card-colors {
+        .card-#{$name} {
+            background-color: $color;
+            box-shadow: none;
+            transform: none;
+            transition: all .2s ease-in-out;
+            transition-property: background-color, box-shadow, transform;
+
+            &:hover {
+                background-color: darken($color, 5%);
+                box-shadow: 0 14px 25px 5px black;
+                transform: scale(1.025, 1.025);
+            }
+        }
+    }
+}
