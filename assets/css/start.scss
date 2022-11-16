@@ -34,7 +34,7 @@ $navigation-card-colors: (
             transition: all .2s ease-in-out;
             transition-property: background-color, box-shadow, transform;
 
-            &:hover {
+            &:hover, &:focus {
                 z-index: 1000;
                 background-color: darken($color, 5%);
                 box-shadow: 0 0 25px 5px black;
