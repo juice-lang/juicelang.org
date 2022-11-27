@@ -1,4 +1,4 @@
-name: Deploy branch master to staging.juicelang.org
+name: Deploy branch main to staging.juicelang.org
 
 on:
     push:
