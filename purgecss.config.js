@@ -4,6 +4,9 @@ module.exports = {
 
     // These are the stylesheets that will be subjected to the purge
     css: ["./_site/assets/css/*.css"],
-    safelist: ["uk-dark", "uk-light", /^uk-animation-/, /^uk-offcanvas/],
+    safelist: {
+        standard: ["uk-dark", "uk-light", /^uk-animation-/, /^uk-offcanvas/],
+        deep: [/^uk-icon/]
+    },
     defaultExtractor: content => content.match(/[\w-/:@]+(?<!:)/g) || []
 };
