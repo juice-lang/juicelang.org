@@ -10,9 +10,10 @@ This is the official website of the *juice* programming language. The website is
 
 - If you don't have Jekyll already installed, do that following [these instructions](https://jekyllrb.com/docs/installation/).
 - Clone this repository using `git`.
-- Install all dependencies by running `bundle install` inside the cloned repository.
-- Serve the website using `jekyll serve --watch`. This runs a web server locally which you can normally access under [https://localhost:4000](https://localhost:4000).
-- If you want to test the few `php` sites of this website, you need to have an Apache server (or similar) running that points to the `_site` directory inside the cloned repository. In this case you can just let Jekyll build the website once using `jekyll build`.
+- Install all dependencies for Jekyll by running `bundle install` inside the cloned repository.
+- Install the node dependencies by running `npm install` or `pnpm install` inside the cloned repository.
+- Serve the website using `bundle exec jekyll serve --watch`. This runs a web server locally which you can normally access under [https://localhost:4000](https://localhost:4000).
+- If you want to test the few `php` sites of this website, you need to have an Apache server (or similar) running that points to the `_site` directory inside the cloned repository. In this case you can just let Jekyll build the website once using `bundle exec jekyll build`.
 
 ### Contributing
 
